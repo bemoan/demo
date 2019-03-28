@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    #active: dev
+  datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  typeAliasesPackage: com.xry.demo.domain
+  mapperLocations: classpath:mapper/*.xml
+mapper:
+    mappers: com.xry.demo.mapper
+    not-empty: false
+    identity: MYSQL
+# 配置是否生成swagger文档
+swagger:
+    enable: true
+
